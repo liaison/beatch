@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Search the keyword within the source files (*.cpp and *.h)
+
+# Usage:  cgrep keyword 
+
+find -L -name "*.cpp" | xargs grep -E $1 -n --color=auto
+
+find -L -name "*.h" | xargs grep -E $1 -n --color=auto
+
+
